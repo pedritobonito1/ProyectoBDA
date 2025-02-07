@@ -3,6 +3,7 @@ package Vista;
 
 import java.awt.Dimension;
 import javax.swing.JDesktopPane;
+import javax.swing.JMenuItem;
 
 
 public class MenuPrincipal extends javax.swing.JFrame {
@@ -36,10 +37,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenu_Mueble_nuevo = new javax.swing.JMenu();
-        jMenu_agrerarMueble = new javax.swing.JMenuItem();
+        menu = new javax.swing.JMenu();
+        Menu_agrerarMueble = new javax.swing.JMenuItem();
         jMenu_verMueble = new javax.swing.JMenuItem();
-        jMenu_ActualizarMueble = new javax.swing.JMenuItem();
+        Menu_agregarstock = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,29 +48,29 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenu1.setPreferredSize(new java.awt.Dimension(100, 50));
         jMenuBar1.add(jMenu1);
 
-        jMenu_Mueble_nuevo.setText("Mueble");
-        jMenu_Mueble_nuevo.setPreferredSize(new java.awt.Dimension(100, 50));
+        menu.setText("Mueble");
+        menu.setPreferredSize(new java.awt.Dimension(100, 50));
 
-        jMenu_agrerarMueble.setText("Agregar mueble");
-        jMenu_agrerarMueble.addActionListener(new java.awt.event.ActionListener() {
+        Menu_agrerarMueble.setText("Agregar mueble");
+        Menu_agrerarMueble.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu_agrerarMuebleActionPerformed(evt);
+                Menu_agrerarMuebleActionPerformed(evt);
             }
         });
-        jMenu_Mueble_nuevo.add(jMenu_agrerarMueble);
+        menu.add(Menu_agrerarMueble);
 
         jMenu_verMueble.setText("Ver mueble");
-        jMenu_Mueble_nuevo.add(jMenu_verMueble);
+        menu.add(jMenu_verMueble);
 
-        jMenu_ActualizarMueble.setText("Agregar stock");
-        jMenu_ActualizarMueble.addActionListener(new java.awt.event.ActionListener() {
+        Menu_agregarstock.setText("Agregar stock");
+        Menu_agregarstock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu_ActualizarMuebleActionPerformed(evt);
+                Menu_agregarstockActionPerformed(evt);
             }
         });
-        jMenu_Mueble_nuevo.add(jMenu_ActualizarMueble);
+        menu.add(Menu_agregarstock);
 
-        jMenuBar1.add(jMenu_Mueble_nuevo);
+        jMenuBar1.add(menu);
 
         setJMenuBar(jMenuBar1);
 
@@ -87,17 +88,25 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenu_agrerarMuebleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_agrerarMuebleActionPerformed
-        Agregar_mueble Agregar_mueble= new Agregar_mueble();
-        jDesktopPane_menu.add(Agregar_mueble);
-        Agregar_mueble.setVisible(true);
-    }//GEN-LAST:event_jMenu_agrerarMuebleActionPerformed
+    private void Menu_agrerarMuebleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Menu_agrerarMuebleActionPerformed
 
-    private void jMenu_ActualizarMuebleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_ActualizarMuebleActionPerformed
-         ActualizarMueble ActualizarMueble= new ActualizarMueble();
+    }//GEN-LAST:event_Menu_agrerarMuebleActionPerformed
+
+    private void Menu_agregarstockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Menu_agregarstockActionPerformed
+         AgregarStock ActualizarMueble= new AgregarStock();
         jDesktopPane_menu.add(ActualizarMueble);
-        ActualizarMueble.setVisible(true); 
-    }//GEN-LAST:event_jMenu_ActualizarMuebleActionPerformed
+         ActualizarMueble.setVisible(true); 
+    }//GEN-LAST:event_Menu_agregarstockActionPerformed
+
+    public JMenuItem getMenu_agrerarMueble() {
+        return Menu_agrerarMueble;
+    }
+
+    
+   
+    public JMenuItem getMenu_agregarstock() {
+        return Menu_agregarstock;
+    }
 
     
     /**
@@ -126,6 +135,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -136,11 +146,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Menu_agregarstock;
+    private javax.swing.JMenuItem Menu_agrerarMueble;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenu_ActualizarMueble;
-    private javax.swing.JMenu jMenu_Mueble_nuevo;
-    private javax.swing.JMenuItem jMenu_agrerarMueble;
     private javax.swing.JMenuItem jMenu_verMueble;
+    private javax.swing.JMenu menu;
     // End of variables declaration//GEN-END:variables
 }

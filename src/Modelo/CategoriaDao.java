@@ -34,6 +34,8 @@ public class CategoriaDao {
         return r;
     }
     
+    
+    
     public int actualizar (Categoria c1){
         String sql="UPDATE Categoria set id_categoria=?, nombre=?";
         int r=0;
