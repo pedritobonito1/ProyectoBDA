@@ -36,17 +36,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
         menu = new javax.swing.JMenu();
         Menu_agrerarMueble = new javax.swing.JMenuItem();
         jMenu_verMueble = new javax.swing.JMenuItem();
         Menu_agregarstock = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jMenu1.setText("Proveedor");
-        jMenu1.setPreferredSize(new java.awt.Dimension(100, 50));
-        jMenuBar1.add(jMenu1);
 
         menu.setText("Mueble");
         menu.setPreferredSize(new java.awt.Dimension(100, 50));
@@ -71,6 +67,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         menu.add(Menu_agregarstock);
 
         jMenuBar1.add(menu);
+
+        jMenu1.setText("Proveedor");
+        jMenu1.setPreferredSize(new java.awt.Dimension(100, 50));
+        jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
 

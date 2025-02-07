@@ -29,9 +29,10 @@ Proveedor pr1 = new Proveedor();
 ProveedorDao prdao = new ProveedorDao();
 Telefono t1 = new Telefono();
 TelefonoDao tdao = new TelefonoDao();
-//Validar va=new Validar();    
 
     public static void main(String[] args) {
+        MuebleDao mdao = new MuebleDao(); // Crear instancia de MuebleDao
+        List<Mueble> lista = mdao.listar(); // Llamar a listar()
         System.out.println("Esta vaina se conectò ");
        /* Validar validar=new Validar();
         EmpleadoDao edao = new EmpleadoDao(); // Crear instancia del DAO
@@ -51,8 +52,21 @@ TelefonoDao tdao = new TelefonoDao();
         }else if(c==2){
             System.out.println("BECERROs");
         }
-      ti
+      tids
         */
+    for (Mueble m : lista) {
+        System.out.println("ID: " + m.getId_mueble() +
+                           ", Nombre: " + m.getNombre() +
+                           ", Precio: " + m.getPrecio() +
+                           ", Stock: " + m.getStock() +
+                           ", Material: " + m.getMaterial() +
+                           ", Alto: " + m.getAlto() +
+                           ", Ancho: " + m.getAncho() +
+                           ", Profundidad: " + m.getProfundidad() +
+                           ", Color: " + m.getColor() +
+                           ", Categoría: " + m.getIdCategoria() +
+                           ", Proveedor: " + m.getIdProveedor());
+    }
     }
 
 

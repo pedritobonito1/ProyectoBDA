@@ -22,7 +22,7 @@ public class EmpleadoDao {
     int r;
     
     public int agregar(Empleado e1){
-        String sql="INSERT INTO Empleado (id_empleado, nombre, password) values(?,?,?)";
+        String sql="INSERT INTO Empleado (id_empleado, nombre, password,cargo) values(?,?,?,?)";
         try {
             con = cn.getConexion();
             ps = con.prepareStatement(sql);
@@ -61,7 +61,7 @@ public class EmpleadoDao {
     }
     
      public int actualizar (Empleado e1){
-        String sql="UPDATE Empleado set id_empleado=?, nombre=?, password=?";
+        String sql="UPDATE Empleado set id_empleado=?, nombre=?, password=?, cargo=?";
         int r=0;
         Connection con =null;
         PreparedStatement ps=null;

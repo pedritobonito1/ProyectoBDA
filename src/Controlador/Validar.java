@@ -21,14 +21,12 @@ public class Validar {
     public int validar (String id, String pas){
         int c = 0;
         String sql = "SELECT cargo FROM empleado WHERE id_empleado = ? AND password = ?";
-
         try {
             con = cn.getConexion();
             ps = con.prepareStatement(sql);
             ps.setString(1, id);  
             ps.setString(2, pas);
             rs = ps.executeQuery();
-
             if (rs.next()) {
                 if(rs.getInt(1)==1){
                     c=1;
@@ -38,8 +36,7 @@ public class Validar {
             }
         }  catch (Exception e) {
              e.printStackTrace();
-        }
-        
+        } 
         return c;
     }
     
