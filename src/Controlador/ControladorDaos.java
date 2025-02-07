@@ -32,7 +32,8 @@ TelefonoDao tdao = new TelefonoDao();
 //Validar va=new Validar();    
 
     public static void main(String[] args) {
-        Validar validar=new Validar();
+        System.out.println("Esta vaina se conectò ");
+       /* Validar validar=new Validar();
         EmpleadoDao edao = new EmpleadoDao(); // Crear instancia del DAO
         List<Empleado> lista = edao.listar(); // Obtener la lista de empleados
         for (Empleado var : lista) {
@@ -51,7 +52,7 @@ TelefonoDao tdao = new TelefonoDao();
             System.out.println("BECERROs");
         }
       
-        
+        */
     }
 
 
